@@ -17,3 +17,13 @@ var currentDate = moment().format('dddd') + " " + moment.format("DD MM YYYY");
 var hourBlock = moment().hours();
 var hourPass;
 var userInput;
+
+// date and hour displayed on homepage
+
+var interval = setInterval(function(){
+    var momentNow = moment();
+    $("#currentDay").html(momentNow.format("YYYY MM DD") + " " + momentNow.format("dddd").substring(0,3).toUpperCase());
+    $("#currentDay").html(currentDate + " " + momentNow.format("hh:mm:ss A"));
+}, 100);
+
+//show on page
