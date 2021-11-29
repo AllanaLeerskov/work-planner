@@ -60,8 +60,6 @@ function initPage() {
   var init6 = JSON.parse(localStorage.getItem("06:00 pm"))
   sixPm.val(init6);
   
-  var init7 = JSON.parse(localStorage.getItem("07:00 pm"))
-  sevenPm.val(init7);
 } 
 
 function background () {
@@ -89,9 +87,9 @@ $(document).ready(function(){
   // local storage when btn clicked
   $(".saveBtn").on("click", function(){
     userInput = $(this).siblings(".form-control").val().trim();
-    console.log(userInput);
+    // console.log(userInput);
     hourSpan = $(this).siblings(".input-group-prepend").text().trim();
-    console.log(hourSpan);
+    // console.log(hourSpan);
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
 
   })
